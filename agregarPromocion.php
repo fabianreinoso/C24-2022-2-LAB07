@@ -31,7 +31,7 @@ $promocion = $sentencia_promocion->fetchAll(PDO::FETCH_OBJ);
                         <input type="text" class="form-control" name="txtDuracion" autofocus required>
                     </div>
                     <div class="d-grid">
-                        <input type="hidden" name="oculto" value="1">
+                    <input type="hidden" name="codigo" value="<?php echo $persona->id; ?>"><P></P>
                         <input type="submit" class="btn btn-primary" value="Registrar">
                     </div>
                 </form>
@@ -60,7 +60,7 @@ $promocion = $sentencia_promocion->fetchAll(PDO::FETCH_OBJ);
                                     <td scope="row"><?php echo $dato->id; ?></td>
                                     <td><?php echo $dato->promocion; ?></td>
                                     <td><?php echo $dato->duracion; ?></td>
-                                    <td><a class="text-primary" href="enviarMensaje.php?codigo=<?php echo $dato->id_persona; ?>"><i class="bi bi-cursor"></i></a></td>
+                                    <td><a class="text-primary" href="enviarMensaje.php?codigo=<?php echo $dato->id; ?>"><i class="bi bi-cursor"></i></a></td>
                                 </tr>
                             <?php
                             }
