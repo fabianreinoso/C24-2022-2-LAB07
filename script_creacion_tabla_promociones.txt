@@ -1,0 +1,10 @@
+use crud;
+CREATE TABLE promociones (
+  id int NOT NULL AUTO_INCREMENT,
+  promocion varchar(200) DEFAULT NULL,
+  duracion varchar(200) DEFAULT NULL,
+  id_persona int NOT NULL,
+  PRIMARY KEY (id),
+  KEY fk_promociones_1_idx (id_persona),
+  CONSTRAINT fk_promociones_1 FOREIGN KEY (id_persona) REFERENCES persona (id)
+) 
